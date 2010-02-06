@@ -1,0 +1,348 @@
+
+<%= render :partial => "account", :locals => { :account => @buyer } %>
+
+-----------------------------------
+
+<?php echo $controller->render( array('partial' => "account", 'locals' => array('account' => $buyer))); ?>
+
+
+===================================
+
+<%= link_to(document.title, :controller => "document", :action => "show", :id => document.id) %>
+
+
+-----------------------------------
+
+<?php echo $controller->url_helper->link_to($document->title, array('controller' => "document", 'action' => "show", 'id' => $document->id)); ?>
+
+
+
+===================================
+
+
+<%= link_to (translate("Visit Other Site"), "http://www.akelos.org/", :confirm => "Are you sure?" ) %>
+
+-----------------------------------
+
+
+<?php echo $controller->url_helper->link_to($controller->text_helper->translate("Visit Other Site"), "http://www.akelos.org/", array('confirm' => "Are you sure?")); ?>
+
+
+===================================
+
+<?php echo $controller->text_helper->translate('I\'m anxious', 'I\'m Testing'); ?>
+
+-----------------------------------
+
+<?php  echo $controller->text_helper->translate('I\'m anxious', 'I\'m Testing'); ?>
+
+
+
+===================================
+
+
+<%= translate 'Write me home' %>
+
+-----------------------------------
+
+<?php echo $controller->text_helper->translate('Write me home'); ?>
+
+
+
+
+===================================
+
+
+<%= translate 'I\'m anxious', 'I\'m Testing' %>
+
+-----------------------------------
+
+<?php echo $controller->text_helper->translate('I\'m anxious', 'I\'m Testing'); ?>
+
+
+
+===================================
+
+
+
+<%= translate "Let's \"Jump\"", "D'Akelos Way" %>
+
+-----------------------------------
+
+<?php echo $controller->text_helper->translate("Let's \"Jump\"", "D'Akelos Way"); ?>
+
+
+
+
+===================================
+
+
+<%= translate "Use helpers like this:
+<%= translate 'This text' %>" %>
+
+-----------------------------------
+
+<?php echo $controller->text_helper->translate("Use helpers like this:
+<%= translate 'This text' %>"); ?>
+
+
+
+
+===================================
+
+
+<%= translate :page_title %>
+
+-----------------------------------
+
+<?php echo $controller->text_helper->translate('page_title'); ?>
+
+
+
+===================================
+
+<%= translate @weekday %>
+
+-----------------------------------
+
+<?php echo $controller->text_helper->translate($weekday); ?>
+
+
+
+===================================
+
+<%= translate @date-weekday %>
+
+-----------------------------------
+
+<?php echo $controller->text_helper->translate($date['weekday']); ?>
+
+
+
+===================================
+
+<%= link_to ("Visit Other Site", "http://www.akelos.org/", {:confirm => "Are you sure?"} ) %>
+
+-----------------------------------
+
+<?php echo $controller->url_helper->link_to("Visit Other Site", "http://www.akelos.org/", array('confirm' => "Are you sure?")); ?>
+
+===================================
+
+<%=link_to "Delete Image", { :action => "delete", :id => @image.id }, :confirm => "Are you sure?", :method => :delete %>
+
+-----------------------------------
+
+<?php echo $controller->url_helper->link_to("Delete Image", array('action' => "delete", 'id' => $image->id), array('confirm' => "Are you sure?", 'method' => 'delete')); ?>
+
+===================================
+
+<%= link_to "Visit Other Site", "http://www.akelos.org/", :confirm => "Are you sure?" %>
+
+-----------------------------------
+
+<?php echo $controller->url_helper->link_to("Visit Other Site", "http://www.akelos.org/", array('confirm' => "Are you sure?")); ?>
+
+===================================
+
+<%= link_to "Visit Other Site", "http://www.akelos.org/", :confirm => "Are you sure?", :options => ["Yes", 'No'] %>
+
+-----------------------------------
+
+<?php echo $controller->url_helper->link_to("Visit Other Site", "http://www.akelos.org/", array('confirm' => "Are you sure?", 'options' => array("Yes", 'No'))); ?>
+
+===================================
+
+<%=mail_to "me@domain.com", "My email", :encode => "javascript"%>
+
+-----------------------------------
+
+<?php echo $controller->url_helper->mail_to("me@domain.com", "My email", array('encode' => "javascript")); ?>
+
+===================================
+
+<%= link_to ( translate("Visit Other Site"), "http://www.akelos.org/", {:confirm => "Are you sure?"} ) %>
+
+-----------------------------------
+
+
+<?php echo $controller->url_helper->link_to($controller->text_helper->translate("Visit Other Site"), "http://www.akelos.org/", array('confirm' => "Are you sure?")); ?>
+
+
+
+
+
+===================================
+
+<%=mail_to: 'bermi@example.com'%>
+
+-----------------------------------
+
+<?php echo $controller->url_helper->mail_to('bermi@example.com'); ?>
+
+
+
+
+===================================
+
+<%=email_link: 'bermi@example.com', 'Click to email'%>
+
+-----------------------------------
+
+
+<?php echo $controller->url_helper->email_link('bermi@example.com', 'Click to email'); ?>
+
+
+===================================
+
+<%=distance_of_time_in_words: 300, 100%>
+
+-----------------------------------
+
+
+<?php echo $controller->date_helper->distance_of_time_in_words(300, 100); ?>
+
+
+===================================
+
+<%= url_for :action => 'select_database' %>
+
+-----------------------------------
+
+
+<?php echo $controller->url_helper->url_for( array('action' => 'select_database')); ?>
+
+
+===================================
+
+<?= "Hola" ?>
+
+-----------------------------------
+
+
+<?php echo  "Hola" ?>
+
+
+===================================
+
+<%= url_for true, false, null %>
+
+-----------------------------------
+
+
+<?php echo $controller->url_helper->url_for(true, false, null); ?>
+
+===================================
+
+<? if (true): ?>
+ <td></td>
+<? endif; ?>
+
+-----------------------------------
+
+<?php if (true): ?>
+ <td></td>
+<?php endif; ?>
+
+
+===================================
+
+
+<%= _('Write me home') %>
+
+-----------------------------------
+
+<?php echo $controller->text_helper->translate('Write me home'); ?>
+
+
+===================================
+
+
+<%= _'Write me home' %>
+
+-----------------------------------
+
+<?php echo $controller->text_helper->translate('Write me home'); ?>
+
+
+
+
+===================================
+
+
+<%= link_to _('Back to overview'), :action => 'listing' %>
+
+-----------------------------------
+
+<?php echo $controller->url_helper->link_to($controller->text_helper->translate('Back to overview'), array('action' => 'listing')); ?>
+
+
+===================================
+
+
+<%= link_to 'Empty string test', '' %>
+
+-----------------------------------
+
+<?php echo $controller->url_helper->link_to('Empty string test', ''); ?>
+
+
+===================================
+
+
+<%= link_to 'Empty string test', "" %>
+
+-----------------------------------
+
+<?php echo $controller->url_helper->link_to('Empty string test', ""); ?>
+
+===================================
+
+<%= link_to "Posted by #{Post.author}" %>
+
+-----------------------------------
+
+<?php echo $controller->url_helper->link_to("Posted by ".$Post->author.""); ?>
+
+===================================
+
+<%= link_to "Status: #{translate 'active',{'key'=> Value.text}, :foo => _('Bar')}" %>
+
+-----------------------------------
+
+<?php echo $controller->url_helper->link_to("Status: ".$controller->text_helper->translate('active', array('key' => $Value->text), array('foo' => $controller->text_helper->translate('Bar'))).""); ?>
+
+
+===================================
+
+<%= link_to "Status: #{translate 'active'}" %>
+
+-----------------------------------
+
+<?php echo $controller->url_helper->link_to("Status: ".$controller->text_helper->translate('active').""); ?>
+
+===================================
+
+<%= translate h('<b>foo</b>') %>
+
+-----------------------------------
+
+<?php echo $controller->text_helper->translate($controller->text_helper->h('<b>foo</b>')); ?>
+
+===================================
+
+<%= named_route_url :action => 'select_database' %>
+
+-----------------------------------
+
+
+<?php echo named_route_url( array('action' => 'select_database')); ?>
+
+===================================
+
+<%= named_route_path :action => 'select_database' %>
+
+-----------------------------------
+
+
+<?php echo named_route_path( array('action' => 'select_database')); ?>
