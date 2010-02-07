@@ -1,0 +1,5 @@
+Sintags was created by Bermi Ferrer http://www.bermi.org and contains portions from other projects like:
+
+- The text lexer is based on the work by Marcus Baker from simpletest http://simpletest.org/.
+- Some Akelos Framework http://akelos.org/ components (Config, Router, Inflector) by Arno Schneider, Kaste and Bermi Ferrer.
+- spyc http://code.google.com/p/spyc/ for parsing Inflection rules.
